@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Hello from '@/components/Hello'
 import Student from '../views/Student.vue'
+import Score from '@/views/Score.vue'
+import Hobby from '@/views/Hobby.vue'
 
 Vue.use(Router)
 
@@ -14,9 +16,20 @@ export default new Router({
       component: Hello
     },
     {
-      path: '/class/:classId/student/:studentNo',
+      path: '/student',
       name: 'Student',
-      component: Student
+      component: Student,
+      children:[
+        {
+          path:"score",
+          name:'score',
+          component: Score
+        },{
+          path:"hobby",
+          name:'hobby',
+          component: Hobby
+        }
+      ]
     }
   ]
 })
