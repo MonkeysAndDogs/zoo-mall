@@ -9,15 +9,5 @@
 
 </style>
 <script>
-  export default {
-    data(){
 
-    },
-    components:[
-
-    ],
-    methods:{
-
-    }
-  }
 </script>
