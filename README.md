@@ -1,4 +1,4 @@
-# mooc-mall1
+# mooc-mall
 
 > hofoo's vue-node
 
