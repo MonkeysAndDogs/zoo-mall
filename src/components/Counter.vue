@@ -11,7 +11,7 @@
 <script>
   var son = 'zzh'
   export default {
-    props:["num2"],
+//    props:["num2"],
     data() {
       return {
         num2: 16,
