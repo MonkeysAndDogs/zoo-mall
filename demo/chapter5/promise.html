@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>promise</title>
+</head>
+<body>
+<script>
+  let checkLogin = function () {
+    return new Promise(function (resolve, reject) {
+      let flag = document.cookie.indexOf('userId') > 1;
+      if (flag) {
+        resolve({
+          status: "success"
+        });
+      } else {
+        reject(new Error("Error"))
+      }
+    });
+
+  }
+  checkLogin()
+    .then(result => console.log("success:", result.status))
+    .catch(error => console.error(error))
+
+
+</script>
+</body>
+</html>
