@@ -16,7 +16,7 @@ export default new Router({
       component: Hello
     },
     {
-      path: '/student',
+      path: '/class/:classId/student/:studentNo',
       name: 'Student',
       component: Student,
       children:[
