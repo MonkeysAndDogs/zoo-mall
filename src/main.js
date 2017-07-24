@@ -4,7 +4,16 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+
 Vue.config.productionTip = false
+
+import {sum, minus} from "./util"
+console.log(`sum:${sum(1,2)}, minus:${minus(2,1)}`);
+
+import * as util from './util'
+console.log(`as sum:${util.sum(1,2)}, minus:${util.minus(2,1)}`);
+
+
 
 /* eslint-disable no-new */
 new Vue({
