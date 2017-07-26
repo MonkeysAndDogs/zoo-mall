@@ -1,7 +1,8 @@
 <template>
   <div>
-    <button>+</button>
-    <button>-</button>
+    <button @click="increment">+</button>
+    <button v-on:click="decrement">-</button>
+    <p>child:{{ num }}</p>
   </div>
 </template>
 <style>
@@ -9,13 +10,19 @@
 </style>
 <script>
   export default{
+      props:["num"],
       data(){
           return {
-              msg: 'hello vue'
+
           }
       },
       methods:{
-
+          increment(){
+              this.$emit('incre');
+          },
+          decrement(){
+              this.$emit('decre');
+          }
       }
   }
 
