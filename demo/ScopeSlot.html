@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ScopeSlot</title>
+  <script src="https://cdn.bootcss.com/vue/2.4.2/vue.js"></script>
+</head>
+<body>
+<div id="parent">
+  <child>
+    <template scope="props11">
+      <span>hello from parent</span>
+      <span>{{ props111.text1 }}</span>
+    </template>
+  </child>
+
+</div>
+
+  <template id="fuck">
+    <div class="child">
+      <slot text1="hello from child"></slot>
+    </div>
+  </template>
+
+<script>
+  // 注册
+  Vue.component('child', {
+    template: '#fuck'
+
+  })
+  // 创建根实例
+  new Vue({
+    el: '#parent'
+  })
+</script>
+</body>
+</html>

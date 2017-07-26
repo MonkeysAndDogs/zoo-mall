@@ -1,14 +1,9 @@
 <template>
   <div>
     <nav-header></nav-header>
-    <div class="nav-breadcrumb-wrap">
-      <div class="container">
-        <nav class="nav-breadcrumb">
-          <a href="/">Home</a>
-          <span>Goods</span>
-        </nav>
-      </div>
-    </div>
+    <nav-bread>
+      <span>Goods</span>
+    </nav-bread>
     <div class="accessory-result-page accessory-page">
       <div class="container">
         <div class="filter-nav">
@@ -105,8 +100,10 @@
   import '../assets/css/checkout.css'
   import '../assets/css/login.css'
   import '../assets/css/product.css'
-  import NavHeader from '@/components/Header.vue'
-  import NavFooter from '@/components/Footer.vue'
+
+  import NavHeader from '@/components/NavHeader.vue'
+  import NavFooter from '@/components/NavFooter.vue'
+  import NavBread from '@/components/NavBread.vue'
 
   export default{
     data(){
@@ -116,6 +113,7 @@
     },
     components: {
       NavHeader,
+      NavBread,
       NavFooter
     }
   }
